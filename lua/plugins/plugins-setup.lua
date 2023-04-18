@@ -24,7 +24,8 @@ vim.cmd([[
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  use 'folke/tokyonight.nvim' -- 主题
+  use 'folke/tokyonight.nvim' -- 主题一
+  use "EdenEast/nightfox.nvim" -- 主题2
   use {
     'nvim-lualine/lualine.nvim',  -- 状态栏
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }  -- 状态栏图标
@@ -38,7 +39,6 @@ return require('packer').startup(function(use)
   use "christoomey/vim-tmux-navigator" -- 用ctl-hjkl来定位窗口
   use "nvim-treesitter/nvim-treesitter" -- 语法高亮
   use "p00f/nvim-ts-rainbow" -- 配合treesitter，不同括号颜色区分
-  use "neoclide/coc.nvim" --c++自动补全 
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",  -- 这个相当于mason.nvim和lspconfig的桥梁
@@ -63,9 +63,9 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use "iamcco/markdown-preview.nvim" -- markdown文件预览
-  use "ekickx/clipboard-image.nvim" --截屏粘贴至markdown
 
-  if packer_bootstrap then
+  use "ekickx/clipboard-image.nvim" --截屏粘贴至markdown
+    if packer_bootstrap then
     require('packer').sync()
   end
 end)

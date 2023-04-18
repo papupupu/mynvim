@@ -19,8 +19,11 @@ keymap.set("n", "<leader>sh", "<C-w>s") -- 垂直新增窗口
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
 -- 切换buffer
-keymap.set("n", "<C-L>", ":bnext<CR>")
-keymap.set("n", "<C-H>", ":bprevious<CR>")
+-- 失效 以后配置 此处是切换上面buffer快捷键
+-- keymap.set("n", "<C-H>", ":bnext<CR>")
+-- keymap.set("n", "<C-L>", ":bprevious<CR>")
+keymap.set("n", "<C-n>", ":bnext<CR>")
+keymap.set("n", " <leader>b", ":bprevious<CR>")
 
 -- ---------- 插件 ---------- ---
 -- nvim-tree
@@ -28,3 +31,9 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- markdown_preview
 keymap.set("n", "<leader>md", ":MarkdownPreview")
+
+-- --leetcode
+-- keymap.set("n", "<leader>ll", ":LeetCodeList<cr>")
+-- keymap.set("n", "<leader>lt", ":LeetCodeTest<cr>")
+-- keymap.set("n", "<leader>ls", ":LeetCodeSubmit<cr>")
+-- keymap.set("n", "<leader>li", ":LeetCodeSignIn<cr>")
